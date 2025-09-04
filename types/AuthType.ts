@@ -1,0 +1,1 @@
+type AuthType = "Login" | "Register" | "None"
