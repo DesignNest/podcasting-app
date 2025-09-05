@@ -23,7 +23,7 @@ const VideoOptions = ({
   isVideoOn: boolean;
   setIsVideoOn: React.Dispatch<React.SetStateAction<boolean>>;
   loading: boolean;
-  podcast: MeetingDetails;
+  podcast?: MeetingDetails;
   email: string;
   isAudioOn:boolean;
   setIsAudioOn: React.Dispatch<React.SetStateAction<boolean>>;
