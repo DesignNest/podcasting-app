@@ -17,7 +17,7 @@ type TokenPayload = {
 
 export default function Home() {
   const [isVideoOn, setIsVideoOn] = useState<boolean>(false);
-  const [meetingDetails, setMeetingDetails] = useState<MeetingDetails>();
+  const [meetingDetails, setMeetingDetails] = useState<MeetingDetails | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [isAudioOn, setIsAudioOn] = useState<boolean>(false);
@@ -103,7 +103,7 @@ export default function Home() {
           isVideoOn={isVideoOn}
           setIsVideoOn={setIsVideoOn}
           loading={loading}
-          podcast={meetingDetails}
+          podcast={meetingDetails ?? undefined} // ✅ safe fallback
           email={email}
           isAudioOn={isAudioOn}
           setIsAudioOn={setIsAudioOn}
